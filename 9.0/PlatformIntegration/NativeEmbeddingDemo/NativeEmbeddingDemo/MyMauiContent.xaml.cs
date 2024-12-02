@@ -24,6 +24,8 @@
 
             await image.ScaleTo(1.2, 60);
             await image.ScaleTo(1, 60);
+
+            Popup.Show();
         }
     }
 }

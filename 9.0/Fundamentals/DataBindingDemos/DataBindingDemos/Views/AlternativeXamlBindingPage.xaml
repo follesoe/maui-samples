@@ -4,11 +4,13 @@
              x:Class="DataBindingDemos.AlternativeXamlBindingPage"
              Title="Alternative XAML Binding">
     <StackLayout Padding="10, 0">
-        <Label Text="TEXT"
+        <Label x:DataType="Slider"
+               Text="TEXT"
                FontSize="40"
                HorizontalOptions="Center"
                VerticalOptions="Center"
-               Scale="{Binding Source={x:Reference slider},
+               Scale="{Binding x:DataType='Slider',
+                               Source={x:Reference slider},
                                Path=Value}" />
 
         <Slider x:Name="slider"

@@ -34,4 +34,8 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\..\Popups\MPowerKit.Popups\MPowerKit.Popups.csproj" />
+	</ItemGroup>
+
 </Project>

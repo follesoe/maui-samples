@@ -1,0 +1,4 @@
+[submodule "Popups"]
+	path = Popups
+	url = https://github.com/MPowerKit/Popups.git
+	branch = bugfix/fix_android_popup_input_transparency

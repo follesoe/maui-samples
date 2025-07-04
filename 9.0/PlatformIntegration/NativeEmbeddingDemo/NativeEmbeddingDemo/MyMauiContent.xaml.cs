@@ -1,14 +1,20 @@
-﻿namespace NativeEmbeddingDemo
+﻿using MPowerKit.Popups.Interfaces;
+
+namespace NativeEmbeddingDemo
 {
     public partial class MyMauiContent : ContentView
     {
         int count = 0;
 
         public Image DotNetBot => image;
+        
+        public IPopupService PopupService { get; }
 
         public MyMauiContent()
         {
             InitializeComponent();
+            
+            PopupService = MPowerKit.Popups.PopupService.Current;
         }
 
         private async void OnCounterClicked(object sender, EventArgs e)
@@ -24,6 +30,8 @@
 
             await image.ScaleTo(1.2, 60);
             await image.ScaleTo(1, 60);
+            
+            PopupService.ShowPopupAsync(new PopupTestPage());
         }
     }
 }

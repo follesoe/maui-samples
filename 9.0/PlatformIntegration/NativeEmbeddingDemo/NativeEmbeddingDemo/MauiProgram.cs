@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using Microsoft.Maui.Controls.Embedding;
+using Syncfusion.Maui.Core.Hosting;
 
 namespace NativeEmbeddingDemo;
 
@@ -35,6 +36,7 @@ public static class MauiProgram
 #endif
         additional?.Invoke(builder);
 
+        builder.ConfigureSyncfusionCore();
         return builder.Build();
     }
 }
